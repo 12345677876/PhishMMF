@@ -2,5 +2,6 @@
 1、该项目包含的内容是钓鱼邮件相关的多模态特征数据集，共涉及到了四个模态数据，分别是邮件文本，邮件中关键URL相关的OSINT、网站截图和网站html\javascript代码；
 2、json_schema.py文件中是我们设计的结构化多模态特征提取模板，all.zip中文件的内容就是我们使用LLM所提取到的钓鱼邮件多模态特征数据集phishMMF；
 3、all.csv是对phishMMF数据集中特征的提取情况和取值范围的统计；
-4、email_phishing_feature_228d.npy是all.zip中文件向量化后生成的数据，可直接供机器学习模型训练识别钓鱼邮件使用；
+4、email_phishing_feature_228d.npy是all.zip中文件向量化后生成的数据，共232维，其中前228位对应特征数据，后4位是各模态特征掩码，可直接供机器学习模型训练识别钓鱼邮件使用；
 5、email_phishing_labels.npy是email_phishing_feature_228d.npy数据对应的标签，钓鱼为1，正常为0；
+6、该数据集共包含11672条数据，其中钓鱼和正常邮件数据各5836条。
